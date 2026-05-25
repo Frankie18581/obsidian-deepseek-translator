@@ -1,0 +1,474 @@
+/* ============================================
+   DeepSeek Translator Plugin Styles
+   ============================================ */
+
+/* --- Hover Tooltip --- */
+.translator-tooltip {
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    max-width: 480px;
+    min-width: 200px;
+    font-size: 13px;
+    line-height: 1.6;
+    animation: translator-fade-in 0.15s ease-out;
+}
+
+.translator-tooltip-header {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.translator-tooltip-content {
+    color: var(--text-normal);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.translator-tooltip-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-muted);
+    border-top-color: var(--text-accent);
+    border-radius: 50%;
+    margin: 8px auto;
+    animation: translator-spin 0.8s linear infinite;
+}
+
+.translator-tooltip-error {
+    color: var(--text-error);
+    font-size: 12px;
+}
+
+@keyframes translator-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes translator-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Sidebar --- */
+.translator-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.translator-sidebar-header {
+    padding: 16px 16px 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    flex-shrink: 0;
+}
+
+.translator-sidebar-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.translator-sidebar-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-normal);
+}
+
+/* Language Row */
+.translator-lang-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.translator-lang-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.translator-lang-group span {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.translator-lang-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.translator-lang-select:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.translator-swap-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.15s ease;
+    margin-bottom: 2px;
+}
+
+.translator-swap-btn:hover {
+    color: var(--text-accent);
+    border-color: var(--interactive-accent);
+    background: var(--background-secondary);
+}
+
+/* Input Section */
+.translator-input-section {
+    padding: 12px 16px 6px;
+}
+
+.translator-section-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.translator-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: var(--font-text);
+    transition: border-color 0.15s ease;
+}
+
+.translator-input:focus {
+    border-color: var(--interactive-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.translator-input::placeholder {
+    color: var(--text-faint);
+}
+
+/* Button Row */
+.translator-btn-row {
+    display: flex;
+    gap: 8px;
+    padding: 6px 16px;
+}
+
+.translator-translate-btn {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.translator-translate-btn:hover {
+    opacity: 0.85;
+}
+
+.translator-translate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.translator-clear-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background: var(--background-primary);
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.translator-clear-btn:hover {
+    color: var(--text-normal);
+    border-color: var(--text-muted);
+}
+
+/* Loading */
+.translator-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.translator-loading-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-accent);
+    animation: translator-bounce 1.4s ease-in-out infinite both;
+}
+
+.translator-loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.translator-loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes translator-bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* Output Section */
+.translator-output-section {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 16px;
+}
+
+.translator-output-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.translator-copy-btn {
+    padding: 3px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-muted);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.translator-copy-btn:hover {
+    color: var(--text-accent);
+    border-color: var(--interactive-accent);
+}
+
+.translator-output {
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.translator-error {
+    color: var(--text-error);
+    padding: 8px;
+    font-size: 12px;
+    background: var(--background-modifier-error);
+    border-radius: 4px;
+}
+
+/* --- Translation Result Modal --- */
+.translator-modal {
+    min-width: 500px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.translator-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.translator-modal-lang {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--background-secondary);
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+.translator-modal-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.translator-modal-text {
+    padding: 12px 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.translator-modal-translated {
+    background: var(--background-primary-alt);
+    border-color: var(--interactive-accent);
+}
+
+.translator-modal-divider {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.translator-modal-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: flex-end;
+}
+
+.translator-modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.translator-modal-buttons button:hover {
+    background: var(--background-secondary);
+}
+
+.translator-modal-replace-btn {
+    background: var(--interactive-accent) !important;
+    color: var(--text-on-accent) !important;
+    border-color: var(--interactive-accent) !important;
+}
+
+.translator-modal-replace-btn:hover {
+    opacity: 0.85 !important;
+}
+
+/* --- Full Document Translation Modal --- */
+.translator-fdl-modal {
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.translator-fdl-modal h2 {
+    margin-bottom: 12px;
+}
+
+.translator-fdl-info {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.translator-fdl-warning {
+    background: var(--background-modifier-warning);
+    color: var(--text-warning);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.translator-fdl-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.translator-fdl-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.translator-fdl-buttons button:hover {
+    background: var(--background-secondary);
+}
+
+.translator-fdl-replace-btn {
+    background: var(--interactive-accent) !important;
+    color: var(--text-on-accent) !important;
+    border-color: var(--interactive-accent) !important;
+}
+
+.translator-fdl-newfile-btn {
+    background: var(--color-green) !important;
+    color: white !important;
+    border-color: var(--color-green) !important;
+}
+
+/* --- Settings Footer --- */
+.translator-settings-footer {
+    margin-top: 24px;
+    padding: 12px 16px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* --- Active Translation Indicator --- */
+.cm-translator-translating {
+    text-decoration-style: wavy;
+    text-decoration-color: var(--text-accent);
+}

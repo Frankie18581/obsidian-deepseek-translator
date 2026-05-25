@@ -1,0 +1,10 @@
+{
+  "id": "deepseek-translator",
+  "name": "DeepSeek Translator",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "沉浸式翻译插件 — 选词翻译、全文翻译、侧边栏翻译，基于 DeepSeek 模型",
+  "author": "Frankie18581",
+  "authorUrl": "https://github.com/Frankie18581",
+  "isDesktopOnly": false
+}
