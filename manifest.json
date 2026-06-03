@@ -1,0 +1,10 @@
+{
+  "id": "deepseek-translator",
+  "name": "Multi Translator",
+  "version": "2.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "沉浸式翻译插件 — 支持 DeepSeek / OpenAI / Claude / Gemini / Grok / Kimi / Qwen / OpenRouter 等多种 AI 服务商",
+  "author": "Hermes",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
