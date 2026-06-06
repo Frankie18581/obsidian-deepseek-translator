@@ -1,5 +1,62 @@
 # Obsidian Multi Translator
 
+*Immersive AI translation plugin for Obsidian — inline, full-doc, sidebar, and hover translation powered by 9+ AI providers.*
+
+[中文说明 ↓](#中文)
+
+## Features
+
+- **Inline Translation**: Select text → right-click menu / `Ctrl+Shift+T` → popup result
+- **Hover Translation**: Auto popup translation on text selection (configurable delay)
+- **Full-Document Translation**: Replace original or create a new file
+- **Sidebar Panel**: Streaming translation with language swap, manual input
+- **Batch Translation**: Auto-split long documents, preserving Markdown formatting
+
+## Supported Providers
+
+| Provider | Example Models | API Format |
+|---|---|---|
+| **DeepSeek** | deepseek-chat, deepseek-reasoner | OpenAI Compatible |
+| **OpenAI** | gpt-4o-mini, gpt-4o, o4-mini | OpenAI Compatible |
+| **OpenRouter** | openai/gpt-4o, anthropic/claude-sonnet-4 | OpenAI Compatible |
+| **Google Gemini** | gemini-2.0-flash, gemini-2.5-pro | OpenAI Compatible |
+| **Anthropic Claude** | claude-sonnet-4, claude-opus-4 | Native Messages API |
+| **Grok (xAI)** | grok-3-beta | OpenAI Compatible |
+| **Kimi (Moonshot)** | moonshot-v1-8k | OpenAI Compatible |
+| **Qwen (DashScope)** | qwen-plus, qwen-max | OpenAI Compatible |
+| **Custom** | Any OpenAI-compatible API | OpenAI Compatible |
+
+## Installation
+
+### From GitHub
+
+1. Download `main.js`, `manifest.json`, `styles.css`
+2. Place them in your vault's `.obsidian/plugins/multi-translator/` directory
+3. Restart Obsidian, enable in Settings → Community Plugins
+
+### Manual Build
+
+```bash
+git clone https://github.com/Frankie18581/obsidian-deepseek-translator.git
+cd obsidian-deepseek-translator
+npm install
+npm run build
+```
+
+## Usage
+
+1. Open Settings → Multi Translator → select provider → enter API Key
+2. Select text → right-click "🌐 Translate Selection" or press `Ctrl+Shift+T`
+3. Or click the Ribbon icon to open the sidebar translation panel
+
+## License
+
+MIT
+
+---
+
+## 中文
+
 沉浸式 AI 翻译插件 — 支持多种 AI 服务商，选词翻译、全文翻译、侧边栏翻译。
 
 ## 支持的服务商

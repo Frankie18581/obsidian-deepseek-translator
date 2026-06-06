@@ -3,7 +3,7 @@
   "name": "Multi Translator",
   "version": "2.0.0",
   "minAppVersion": "1.5.0",
-  "description": "沉浸式翻译插件 — 支持 DeepSeek / OpenAI / Claude / Gemini / Grok / Kimi / Qwen / OpenRouter 等多种 AI 服务商",
+  "description": "Immersive AI translation for Obsidian — inline, full-doc, sidebar, and hover translation powered by DeepSeek, OpenAI, Claude, Gemini, Grok, Kimi, Qwen, OpenRouter, and custom providers",
   "author": "Hermes",
   "authorUrl": "",
   "isDesktopOnly": false
