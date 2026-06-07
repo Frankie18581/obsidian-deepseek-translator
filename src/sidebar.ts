@@ -1,4 +1,4 @@
-import { ItemView, WorkspaceLeaf, Notice, setIcon } from "obsidian";
+import { ItemView, WorkspaceLeaf, Notice } from "obsidian";
 import type { DeepSeekTranslatorPlugin } from "../main";
 import { translateTextStreaming, getLanguageName, LANGUAGE_NAMES } from "./api";
 
@@ -98,9 +98,8 @@ export class TranslatorSidebarView extends ItemView {
         clearBtn.addEventListener("click", () => this.clearAll());
 
         // Loading indicator (hidden by default)
-        this.loadingEl = scrollBody.createDiv("translator-loading");
+        this.loadingEl = scrollBody.createDiv("translator-loading is-hidden");
         this.loadingEl.createSpan({ text: "⏳ 翻译中..." });
-        this.loadingEl.style.display = "none";
 
         // Output area
         const outputSection = scrollBody.createDiv("translator-output-section");
@@ -145,7 +144,7 @@ export class TranslatorSidebarView extends ItemView {
         this.isTranslating = true;
         this.translateBtn.disabled = true;
         this.translateBtn.setText("翻译中...");
-        this.loadingEl.style.display = "flex";
+        this.loadingEl.removeClass("is-hidden");
         this.outputEl.empty();
 
         const config = {
@@ -174,7 +173,7 @@ export class TranslatorSidebarView extends ItemView {
             this.isTranslating = false;
             this.translateBtn.disabled = false;
             this.translateBtn.setText("翻译");
-            this.loadingEl.style.display = "none";
+            this.loadingEl.addClass("is-hidden");
         }
     }
 
@@ -194,7 +193,7 @@ export class TranslatorSidebarView extends ItemView {
     private clearAll(): void {
         this.inputEl.value = "";
         this.outputEl.empty();
-        this.inputEl.style.height = "auto";
+        this.inputEl.setCssProps({ height: "auto" as string });
     }
 
     private async copyOutput(): Promise<void> {
@@ -208,7 +207,7 @@ export class TranslatorSidebarView extends ItemView {
     }
 
     private autoResize(): void {
-        this.inputEl.style.height = "auto";
-        this.inputEl.style.height = Math.min(this.inputEl.scrollHeight, 300) + "px";
+        this.inputEl.setCssProps({ height: "auto" as string });
+        this.inputEl.setCssProps({ height: Math.min(this.inputEl.scrollHeight, 300) + "px" as string });
     }
 }

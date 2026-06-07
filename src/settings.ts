@@ -51,10 +51,10 @@ export class TranslatorSettingTab extends PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
 
-        containerEl.createEl("h2", { text: "🌐 多模型翻译 设置" });
+        new Setting(containerEl).setName("🌐 Multi-Provider Translation").setHeading();
 
         // === Provider & API Settings ===
-        containerEl.createEl("h3", { text: "🔌 服务商设置" });
+        new Setting(containerEl).setName("🔌 Provider & API").setHeading();
 
         // Provider selector
         new Setting(containerEl)
@@ -142,7 +142,7 @@ export class TranslatorSettingTab extends PluginSettingTab {
             );
 
         // === Translation Settings ===
-        containerEl.createEl("h3", { text: "🌐 翻译设置" });
+        new Setting(containerEl).setName("🌐 Translation").setHeading();
 
         const sourceSetting = new Setting(containerEl)
             .setName("源语言")
@@ -207,7 +207,7 @@ export class TranslatorSettingTab extends PluginSettingTab {
             );
 
         // === UI Settings ===
-        containerEl.createEl("h3", { text: "🖱️ 交互设置" });
+        new Setting(containerEl).setName("🖱️ Interaction").setHeading();
 
         new Setting(containerEl)
             .setName("启用悬停翻译")

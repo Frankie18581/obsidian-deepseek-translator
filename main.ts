@@ -1,9 +1,9 @@
-import { Plugin, MarkdownView } from "obsidian";
+import { Plugin } from "obsidian";
 import { TranslatorSettingTab, PluginSettings, DEFAULT_SETTINGS } from "./src/settings";
 import { TranslatorSidebarView, SIDEBAR_VIEW_TYPE } from "./src/sidebar";
 import { createHoverTranslationExtension } from "./src/hover";
 import { registerCommands } from "./src/commands";
-import { TranslatorConfig, DEFAULT_CONFIG } from "./src/api";
+import type { TranslatorConfig } from "./src/api";
 
 export class DeepSeekTranslatorPlugin extends Plugin {
     settings: PluginSettings;
@@ -68,7 +68,7 @@ export class DeepSeekTranslatorPlugin extends Plugin {
 
     onunload(): void {
         console.log("🌐 Multi Translator: unloading plugin");
-        this.app.workspace.detachLeavesOfType(SIDEBAR_VIEW_TYPE);
+        // Note: do NOT call detachLeavesOfType() here — Obsidian handles cleanup automatically.
     }
 
     async loadSettings(): Promise<void> {

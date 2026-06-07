@@ -1,6 +1,11 @@
 /* ============================================
-   DeepSeek Translator Plugin Styles
+   Multi Translator Plugin Styles
    ============================================ */
+
+/* --- Utility --- */
+.is-hidden {
+    display: none;
+}
 
 /* --- Hover Tooltip --- */
 .translator-tooltip {

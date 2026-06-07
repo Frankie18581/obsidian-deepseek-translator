@@ -1,9 +1,9 @@
 {
   "id": "deepseek-translator",
   "name": "Multi Translator",
-  "version": "2.0.1",
-  "minAppVersion": "1.5.0",
-  "description": "Immersive AI translation for Obsidian — inline, full-doc, sidebar, and hover translation powered by DeepSeek, OpenAI, Claude, Gemini, Grok, Kimi, Qwen, OpenRouter, and custom providers",
+  "version": "2.0.2",
+  "minAppVersion": "1.7.0",
+  "description": "Immersive AI translation — inline, full-doc, sidebar, and hover translation powered by DeepSeek, OpenAI, Claude, Gemini, Grok, Kimi, Qwen, OpenRouter, and custom providers.",
   "author": "Hermes",
   "authorUrl": "",
   "isDesktopOnly": false
