@@ -1,8 +1,8 @@
 {
   "id": "deepseek-translator",
   "name": "Multi Translator",
-  "version": "2.0.2",
-  "minAppVersion": "1.7.0",
+  "version": "2.0.3",
+  "minAppVersion": "1.7.2",
   "description": "Immersive AI translation — inline, full-doc, sidebar, and hover translation powered by DeepSeek, OpenAI, Claude, Gemini, Grok, Kimi, Qwen, OpenRouter, and custom providers.",
   "author": "Hermes",
   "authorUrl": "",
